@@ -7,8 +7,8 @@ WORKDIR $WORKING_DIR
 
 MAINTAINER Shan
 
-COPY HelloWorld.java .
-COPY MyTestApp ./Folders/MyTestApp
+COPY ["HelloWorld.java", "."]
+COPY ["MyTestApp", "./Folders/MyTestApp"]
 RUN ["javac", "HelloWorld.java"]
 
 CMD ["java", "HelloWorld"]
