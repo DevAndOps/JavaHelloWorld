@@ -11,6 +11,6 @@ COPY ["HelloWorld.java", "."]
 COPY ["MyTestApp", "./Folders/MyTestApp"]
 RUN ["javac", "HelloWorld.java"]
 
-ENTRYPOINT top -b
+ENTRYPOINT exec top -b
 LABEL Application.Name="Java Container" \
       Application.Platform="Java"
