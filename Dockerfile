@@ -11,6 +11,6 @@ COPY ["HelloWorld.java", "."]
 COPY ["MyTestApp", "./Folders/MyTestApp"]
 RUN ["javac", "HelloWorld.java"]
 
-CMD ["java", "HelloWorld"]
+CMD ["java", "HelloWorld", "argument1"]
 LABEL Application.Name="Java Container" \
       Application.Platform="Java"
