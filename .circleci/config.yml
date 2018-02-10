@@ -9,7 +9,7 @@ jobs:
       - run: mkdir -p my_workspace
       - run: echo "Trying out workspaces" > my_workspace/echo-output
       - run: 
-        name: Test command line
+        name: "Test command"
         command: |
           echo "This is a feature branch."
           echo "access env variable $env_var_1"
