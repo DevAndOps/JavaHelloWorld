@@ -11,8 +11,7 @@ jobs:
       - run: 
         name: Test command line
         command: |
-          a=test
-          echo "value of A is $a"
+          echo "This is a feature branch"
           echo "access env variable $env_var_1"
       - persist_to_workspace:
           # Must be an absolute path, or relative path from working_directory
@@ -25,7 +24,7 @@ jobs:
       - image: circleci/ruby:2.4.1
     steps:
       - checkout
-      - run: echo "A more familiar hi"  
+      - run: echo "This is a feature branch"  
       - attach_workspace:
           # Must be absolute path or relative path from working_directory
           at: my_workspace
@@ -41,6 +40,9 @@ workflows:
   one_and_two:
     jobs:
       - one
+        filters:
+          branches:
+            only: /feature*/
       - two:
           requires:
             - one
