@@ -40,10 +40,10 @@ workflows:
   one_and_two:
     jobs:
       - one
-        filters:
-          branches:
-            only: 
-              - /feature*/
+          filters:
+            branches:
+              only: 
+                - /feature*/
       - two:
           requires:
             - one
