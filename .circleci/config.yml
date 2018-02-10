@@ -43,7 +43,7 @@ workflows:
           filters:
             branches:
               only: 
-                - /feature*/
+                - /feature.*/
       - two:
           requires:
             - one
