@@ -11,7 +11,7 @@ jobs:
       - run: 
         name: Test command line
         command: |
-          echo "This is a feature branch"
+          echo "This is a feature branch."
           echo "access env variable $env_var_1"
       - persist_to_workspace:
           # Must be an absolute path, or relative path from working_directory
